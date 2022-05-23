@@ -1,3 +1,4 @@
+/* eslint-disable react-native/no-inline-styles */
 /**
  * Sample React Native App
  * https://github.com/facebook/react-native
@@ -19,14 +20,6 @@
    View,
  } from 'react-native';
  
- import {
-   Colors,
-   DebugInstructions,
-   Header,
-   LearnMoreLinks,
-   ReloadInstructions,
- } from 'react-native/Libraries/NewAppScreen';
- 
  const Section: React.FC<
    PropsWithChildren<{
      title: string;
@@ -39,7 +32,7 @@
          style={[
            styles.sectionTitle,
            {
-             color: isDarkMode ? Colors.white : Colors.black,
+             color: isDarkMode ? '#FFF' : '#000',
            },
          ]}>
          {title}
@@ -48,7 +41,7 @@
          style={[
            styles.sectionDescription,
            {
-             color: isDarkMode ? Colors.light : Colors.dark,
+             color: isDarkMode ? '#DAE1E7' : '#444',
            },
          ]}>
          {children}
@@ -61,7 +54,7 @@
    const isDarkMode = useColorScheme() === 'dark';
  
    const backgroundStyle = {
-     backgroundColor: isDarkMode ? Colors.darker : Colors.lighter,
+     backgroundColor: isDarkMode ? '#222' : '#F3F3F3',
    };
  
    return (
@@ -70,25 +63,21 @@
        <ScrollView
          contentInsetAdjustmentBehavior="automatic"
          style={backgroundStyle}>
-         <Header />
+         This doesn't work on Expo
          <View
            style={{
-             backgroundColor: isDarkMode ? Colors.black : Colors.white,
+             backgroundColor: isDarkMode ? '#000' : '#FFF',
            }}>
            <Section title="Step One">
              Edit <Text style={styles.highlight}>App.tsx</Text> to change this
              screen and then come back to see your edits.
            </Section>
-           <Section title="See Your Changes">
-             <ReloadInstructions />
-           </Section>
-           <Section title="Debug">
-             <DebugInstructions />
-           </Section>
+           <Section title="See Your Changes">This doesn't work on Expo</Section>
+           <Section title="Debug">This doesn't work on Expo</Section>
            <Section title="Learn More">
              Read the docs to discover what to do next:
            </Section>
-           <LearnMoreLinks />
+           This doesn't work on Expo
          </View>
        </ScrollView>
      </SafeAreaView>

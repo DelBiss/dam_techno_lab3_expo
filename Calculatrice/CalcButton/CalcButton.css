@@ -1,0 +1,14 @@
+.calc_button {
+    display: flex;
+    background-color: #f0f0f0;
+    border-radius: 10px;
+    justify-content: center;
+    align-items: center;
+    font-size: xx-large;
+    font-weight: bold;
+    width: 22%;
+}
+
+.calc_button.total {
+    width: 48%;
+}

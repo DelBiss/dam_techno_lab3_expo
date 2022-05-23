@@ -1,0 +1,7 @@
+.calc_wrapper {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    background-color: #5e5e5e;
+    height: 100%;
+}

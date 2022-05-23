@@ -1,0 +1,9 @@
+.calc_button_row {
+    display: flex;
+    flex-direction: row;
+    flex: 1;
+    /* background-color: #e9ac31; */
+    /* margin: 1rem; */
+    gap: 4%;
+    justify-content: center;
+}
