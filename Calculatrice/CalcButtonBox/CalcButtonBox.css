@@ -1,7 +1,0 @@
-.calc_button_box {
-    display: flex;
-    flex-direction: column;
-    height: inherit;
-    padding: 0.5rem;
-    gap: 0.5rem;
-}

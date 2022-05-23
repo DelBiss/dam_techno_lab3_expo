@@ -1,13 +1,14 @@
+import React, {PropsWithChildren} from 'react';
 import Render from "./CalcScreen_render";
-import { calcResult } from "../calc";
+import { calcResult } from "../calculator_type";
 
-interface ScreenProps {
+interface CalcResultProps {
     result: calcResult;
 }
 
-function CalcScreen(props:ScreenProps) {
+const CalcScreen: React.FC<CalcResultProps> = (props) => {
     return (
-        <Render>
+        <Render result={props.result}>
             {props.result.value}
         </Render>
     );

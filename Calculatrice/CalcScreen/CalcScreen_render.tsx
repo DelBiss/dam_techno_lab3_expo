@@ -1,14 +1,23 @@
 import React, {PropsWithChildren} from 'react';
-import { Text } from 'react-native';
+import { View, Text } from 'react-native';
 import { styles } from '../calculatrice_style';
+import { calcResult } from "../calculator_type";
 
+interface CalcResultProps {
+    result: calcResult;
+}
 
-const Render: React.FC<PropsWithChildren<{}>> = ({children}) => {
+const Render: React.FC<PropsWithChildren<CalcResultProps>> = (props) => {
     
     return (
-        <Text style={styles.calcScreen}>
-            {children}
+        <View style={styles.calcScreen}>
+        <Text style={styles.calcScreen_expression}>
+            {props.result.expression}
         </Text>
+        <Text style={styles.calcScreen_result}>
+            {props.children}
+        </Text>
+      </View>
     );
 }
 
